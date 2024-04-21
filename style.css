@@ -1,0 +1,166 @@
+:root{
+    --background-color: #1A1A1A;
+   --font-color: #FFFFFF80;
+     --input-color: #333333;
+    --accent-color: #00BFFF;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding: 100px;
+}
+
+.form{
+    color: var(--font-color);
+    width: 450px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+
+}
+
+.title{
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.name_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+input{
+    background-color: var(--input-color);
+    padding: 13px 10px;
+    border-radius: 10px;
+
+}
+
+.name_box input{
+  width: 100%;
+}
+.input{
+    width: 100%;
+}
+
+label{
+    position: relative;
+}
+span{
+    color: var(--font-color);
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    transition: 0.3s ease;
+}
+
+form label input:focus + span{
+  top: -7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.dot{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.blue_dot{
+    padding-right: 13px;
+}
+
+.submit{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: #00BFFF;
+    padding: 10px 120px;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    animation: color-change-2x 1s linear infinite alternate both;
+  }
+  
+  @keyframes color-change-2x {
+    0% {
+      background: red;
+    }
+    100% {
+      background: #00BFFF;
+    }
+  }
+  
+
+  .account{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+  }
+
+  .a{
+    color: #00BFFF;
+    border-bottom: 1px solid #00BFFF;
+  }
+
+  
+
+  .fillout {
+    font-size: 30px;
+    color: var(--input-color);
+    padding-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    animation: slideAndGrow 4s ease-in-out forwards, changeColor 4s ease-in-out forwards;
+  }
+  
+  @keyframes slideAndGrow {
+    0% {
+      left: -30%; 
+      transform: scale(1) translateX(-50%);
+    }
+    50% {
+      left: 50%; 
+      transform: scale(1.2) translateX(-50%);
+    }
+    100% {
+      left: 50%; 
+      transform: scale(1.2) translateX(-50%);
+    }
+  }
+  
+  @keyframes changeColor {
+    0%, 50% {
+      color: var(--input-color);
+    }
+    100% {
+      color: #00BFFF; 
+    }
+  }
+  
+
